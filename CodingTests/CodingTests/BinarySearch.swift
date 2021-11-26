@@ -28,4 +28,35 @@ class BinarySearch {
             return performSearch(array: array, target: target, lower: mid+1, upper: upper)
         }
     }
+    
+}
+
+class Solution {
+    let badVersion = 1702766719
+    func isBadVersion(_ version: Int) -> Bool {
+        return badVersion == version || version > badVersion
+    }
+    
+    func firstBadVersion(_ n: Int) -> Int {
+        var beg: Int
+        var last: Int
+        var mid: Int;
+        beg = 1
+        last = n;
+        var pos: Int = 1;
+        while beg<=last {
+            // ensure you calculate mid values this way ,otherwise ,it would cause overflow
+            mid = beg + (last-beg)/2;
+            let x = isBadVersion(mid);
+            if x == true {
+                pos = mid;
+                last = mid-1;
+            } else {
+                beg = mid+1
+            }
+        }
+        
+        // return the first index of faulty product
+        return pos
+    }
 }

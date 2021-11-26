@@ -28,6 +28,10 @@ class CodingTestsTests: XCTestCase {
         
         XCTAssertEqual(BinarySearch().searchUsingBinary(array: [-1, -3, -4, 5,6], target: -4), 2)
     }
+    
+    func testBadVersion() {
+        XCTAssertEqual(Solution().firstBadVersion(Int.max - 1), 1702766719)
+    }
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
