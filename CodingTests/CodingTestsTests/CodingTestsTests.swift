@@ -32,6 +32,10 @@ class CodingTestsTests: XCTestCase {
     func testBadVersion() {
         XCTAssertEqual(Solution().firstBadVersion(Int.max - 1), 1702766719)
     }
+    
+    func testSearchInsert() {
+        XCTAssertEqual(Solution().searchInsert([1,3,5,6], 0), 0)
+    }
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
