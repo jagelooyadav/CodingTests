@@ -17,6 +17,7 @@
 		16D5A958275013F9003B2886 /* CodingTestsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D5A957275013F9003B2886 /* CodingTestsTests.swift */; };
 		16D5A963275013F9003B2886 /* CodingTestsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D5A962275013F9003B2886 /* CodingTestsUITests.swift */; };
 		16D5A974275014BE003B2886 /* BinarySearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D5A973275014BE003B2886 /* BinarySearch.swift */; };
+		16E1B846275E2B15005F032D /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E1B845275E2B15005F032D /* LinkedList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		16D5A962275013F9003B2886 /* CodingTestsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingTestsUITests.swift; sourceTree = "<group>"; };
 		16D5A964275013F9003B2886 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16D5A973275014BE003B2886 /* BinarySearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearch.swift; sourceTree = "<group>"; };
+		16E1B845275E2B15005F032D /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				16D5A94E275013F9003B2886 /* Info.plist */,
 				16D5A946275013F7003B2886 /* CodingTests.xcdatamodeld */,
 				16D5A973275014BE003B2886 /* BinarySearch.swift */,
+				16E1B845275E2B15005F032D /* LinkedList.swift */,
 			);
 			path = CodingTests;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16E1B846275E2B15005F032D /* LinkedList.swift in Sources */,
 				16D5A942275013F7003B2886 /* ViewController.swift in Sources */,
 				16D5A93E275013F7003B2886 /* AppDelegate.swift in Sources */,
 				16D5A940275013F7003B2886 /* SceneDelegate.swift in Sources */,
