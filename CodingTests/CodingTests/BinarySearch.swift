@@ -78,9 +78,7 @@ class Solution {
                 if nums[mid] == target {
                     position = mid
                     return position
-                }
-                
-                if target < nums[mid]  {
+                } else if target < nums[mid]  {
                     upper = mid - 1
                     if mid-1 > 0, target > nums[mid-1] {
                         return mid
@@ -99,5 +97,38 @@ class Solution {
                 }
             }
             return position
+        }
+    
+    ///Find First and Last Position of Element in Sorted Array
+    func searchRange(_ nums: [Int], _ target: Int) -> [Int] {
+            let first = binarySearch(nums: nums, isFromBegining: true, target: target)
+            let second = binarySearch(nums: nums, isFromBegining: false, target: target)
+            return [first, second]
+        }
+        
+        func binarySearch(nums: [Int], isFromBegining: Bool, target: Int) -> Int {
+            if nums.count == 0 {
+                return -1
+            }
+            
+            var low = 0
+            var high = nums.count - 1
+            var result = -1
+            while high >= low {
+                let mid = low + (high - low)/2
+                if nums[mid] == target {
+                    result = mid
+                    if isFromBegining {
+                        high = mid - 1
+                    } else {
+                        low = mid + 1
+                    }
+                } else if target < nums[mid] {
+                    high = mid - 1
+                } else {
+                    low = mid + 1
+                }
+            }
+            return result
         }
 }
