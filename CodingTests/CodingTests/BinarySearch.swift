@@ -131,4 +131,25 @@ class Solution {
             }
             return result
         }
+    
+    func searchMatrix(_ matrix: [[Int]], _ target: Int) -> Bool {
+        let items = matrix.flatMap { $0 }
+        
+        var low = 0
+        var high = items.count - 1
+        
+        while high >= low {
+            let mid = low + (high - low)/2
+            if items[mid] == target {
+                return true
+            }
+            if target < items[mid] {
+                high = mid - 1
+            } else {
+                low = mid + 1
+            }
+        }
+        
+        return false
+    }
 }

@@ -36,6 +36,11 @@ class CodingTestsTests: XCTestCase {
     func testSearchInsert() {
         XCTAssertEqual(Solution().searchInsert([1,3,5,6], 0), 0)
     }
+    
+    func testSearchMatrix() {
+        XCTAssertFalse(Solution().searchMatrix([[1]], 2))
+    }
+    
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
