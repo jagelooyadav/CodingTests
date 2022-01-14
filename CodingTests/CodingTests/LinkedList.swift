@@ -124,4 +124,17 @@ class ListNodeSolution {
     return head
     }
     
+    func hasCycle(head: ListNode?) -> Bool {
+        var temp = head;
+        var temp1 = head;
+        while (temp?.next != nil && temp1?.next != nil && temp1?.next?.next != nil ) {
+            temp = temp?.next;
+            temp1 = temp1?.next?.next;
+            if temp?.next === temp1?.next {
+                return true;
+            }
+        }
+        return false;
+    }
+    
 }

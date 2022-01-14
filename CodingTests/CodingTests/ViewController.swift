@@ -23,6 +23,18 @@ class ViewController: UIViewController {
         let head = ListNodeSolution().removeDuplicates(llist: list.head)
         list.head = head
         list.printList()
+        printHasCycle()
+    }
+    
+    func printHasCycle() {
+        let linkedList = LinkList(array: [1])
+        let node2 = ListNode.init(2)
+        linkedList.head?.next = node2
+        let node3 = ListNode.init(3)
+        node2.next = node3
+        node3.next = node2
+        print(ListNodeSolution().hasCycle(head: linkedList.head))
+        
     }
 }
 
