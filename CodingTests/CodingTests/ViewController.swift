@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CloudKit
 
 class ViewController: UIViewController {
     override func viewDidLoad() {
@@ -24,6 +25,10 @@ class ViewController: UIViewController {
         list.head = head
         list.printList()
         printHasCycle()
+        printHasCycle()
+        print(removeDuplicate(str: "abccbad"))
+        print(findLongestUniqueSubString(string: "abccbaddmghijk"))
+        //print(StringProblem().findLongestUniqueSubString(in: "abccbaddmghijk"))
     }
     
     func printHasCycle() {
@@ -35,6 +40,58 @@ class ViewController: UIViewController {
         node3.next = node2
         print(ListNodeSolution().hasCycle(head: linkedList.head))
         
+    }
+    
+    func removeDuplicate(str: String) -> String {
+        var data: [String] = []
+        var map: [String: String] = [:]
+        
+        for element in str {
+            if let element = map[String(element)] {
+                print("duplecte element == \(element)")
+            } else {
+                map[String(element)] = String(element)
+                data.append(String(element))
+            }
+        }
+        return data.joined()
+    }
+    
+    func findLongestUniqueSubString(string: String) -> String {
+        var result = ""
+        // ABC
+        for i in 0...string.count - 1 {
+            for j in i...string.count - 1 {
+                if isDictinct(string: string, from: i, to: j) {
+                    let temp = subString(from: i, to: j, string: string)
+                    if temp.count > result.count {
+                        result = temp
+                    }
+                }
+            }
+        }
+        return result
+    }
+    
+    func subString(from: Int, to: Int, string: String) -> String {
+        let startIndex = string.index(string.startIndex, offsetBy: from)
+        let endIndex = string.index(string.startIndex, offsetBy: to)
+        let subString = string[startIndex...endIndex]
+        return String(subString)
+    }
+    
+    func isDictinct(string: String, from: Int, to: Int) -> Bool {
+        let substring = subString(from: from, to: to, string: string)
+        var duplicateEntry: [String: String] = [:]
+        for element in substring {
+            if let savedEntry = duplicateEntry[String(element)] {
+                print("allready saved == \(savedEntry)")
+                return false
+            } else {
+                duplicateEntry[String(element)] = String(element)
+            }
+        }
+        return true
     }
 }
 

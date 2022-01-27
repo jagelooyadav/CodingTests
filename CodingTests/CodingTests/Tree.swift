@@ -74,7 +74,7 @@ class TreeTraverseBFS {
     
     func height(node: TreeNode?) -> Int {
         if node == nil {
-            return 0
+            return -1
         } else {
             let leftHeight = height(node: node?.left)
             let rightHeight = height(node: node?.right)
