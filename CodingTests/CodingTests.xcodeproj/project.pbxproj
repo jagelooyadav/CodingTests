@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1604578D279AF13C0012A11B /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1604578C279AF13C0012A11B /* Tree.swift */; };
 		16B5002327988FA400205BA2 /* DoublyLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B5002227988FA400205BA2 /* DoublyLinkedList.swift */; };
+		16B6D5AD27AEAE3400EA50A3 /* ArrayProblem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B6D5AC27AEAE3400EA50A3 /* ArrayProblem.swift */; };
+		16D4FB6B27A9660000371D91 /* VodafoneTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D4FB6A27A9660000371D91 /* VodafoneTest.swift */; };
 		16D5A93E275013F7003B2886 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D5A93D275013F7003B2886 /* AppDelegate.swift */; };
 		16D5A940275013F7003B2886 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D5A93F275013F7003B2886 /* SceneDelegate.swift */; };
 		16D5A942275013F7003B2886 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D5A941275013F7003B2886 /* ViewController.swift */; };
@@ -44,6 +46,8 @@
 /* Begin PBXFileReference section */
 		1604578C279AF13C0012A11B /* Tree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
 		16B5002227988FA400205BA2 /* DoublyLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoublyLinkedList.swift; sourceTree = "<group>"; };
+		16B6D5AC27AEAE3400EA50A3 /* ArrayProblem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayProblem.swift; sourceTree = "<group>"; };
+		16D4FB6A27A9660000371D91 /* VodafoneTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VodafoneTest.swift; sourceTree = "<group>"; };
 		16D5A93A275013F7003B2886 /* CodingTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodingTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16D5A93D275013F7003B2886 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16D5A93F275013F7003B2886 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +131,8 @@
 				1604578C279AF13C0012A11B /* Tree.swift */,
 				16EA026C27A2BF5200461C79 /* StringProblem.swift */,
 				16EA026E27A2CB9900461C79 /* DecodableModel.swift */,
+				16D4FB6A27A9660000371D91 /* VodafoneTest.swift */,
+				16B6D5AC27AEAE3400EA50A3 /* ArrayProblem.swift */,
 			);
 			path = CodingTests;
 			sourceTree = "<group>";
@@ -284,11 +290,13 @@
 				16EA026D27A2BF5200461C79 /* StringProblem.swift in Sources */,
 				16B5002327988FA400205BA2 /* DoublyLinkedList.swift in Sources */,
 				16D5A93E275013F7003B2886 /* AppDelegate.swift in Sources */,
+				16B6D5AD27AEAE3400EA50A3 /* ArrayProblem.swift in Sources */,
 				16EA026F27A2CB9900461C79 /* DecodableModel.swift in Sources */,
 				16D5A940275013F7003B2886 /* SceneDelegate.swift in Sources */,
 				1604578D279AF13C0012A11B /* Tree.swift in Sources */,
 				16D5A948275013F7003B2886 /* CodingTests.xcdatamodeld in Sources */,
 				16D5A974275014BE003B2886 /* BinarySearch.swift in Sources */,
+				16D4FB6B27A9660000371D91 /* VodafoneTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -85,4 +85,22 @@ class TreeTraverseBFS {
             }
         }
     }
+    
+    func isBST(node: TreeNode?) -> Bool {
+        
+        return isBSTUtil(node: node, min: Int.min, max: Int.max)
+    }
+    
+    func isBSTUtil(node: TreeNode?, min: Int, max: Int) -> Bool {
+        guard let node = node else {
+            return true
+        }
+
+        
+        if node.data < min || node.data > max {
+            return false
+        }
+        return isBSTUtil(node: node.left, min: min, max: node.data - 1) && isBSTUtil(node: node.right, min: node.data + 1, max: max)
+        
+    }
 }
