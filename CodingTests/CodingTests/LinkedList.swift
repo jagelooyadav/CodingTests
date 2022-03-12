@@ -137,4 +137,73 @@ class ListNodeSolution {
         return false;
     }
     
+    func addBigNumbers(_ a: ListNode?, _ b: ListNode?) -> ListNode? {
+        var result: ListNode?
+        var head = a
+        var list1: [Int] = []
+        var list2: [Int] = []
+        var listFinal: [Int] = []
+        if let value = head?.data {
+            list1.append(value)
+        }
+        while head?.next != nil, let value = head?.next?.data {
+            head = head?.next
+            list1.append(value)
+        }
+        head = b
+        if let value = head?.data {
+            list2.append(value)
+        }
+        while head?.next != nil, let value = head?.next?.data {
+            list2.append(value)
+            head = head?.next
+        }
+        var length = list1.count > list2.count ? list1.count : list2.count
+        if length == 0 {
+            return result
+        }
+        length = length - 1
+        var extra = 0
+        while length >= 0 {
+            var first = 0
+            var second = 0
+            if length <= list1.count {
+                first = list1[length]
+            }
+            if length <= list2.count {
+                second = list2[length]
+            }
+            var element = first + second + extra
+            if element >= 10 {
+                extra = element / 10
+                element = element % 10
+            }
+            
+            listFinal.append(element)
+            length = length - 1
+        }
+        //print("extra == \(extra)")
+        if extra > 0 {
+            listFinal.append(extra)
+        }
+        print(listFinal)
+        var lastNode: ListNode?
+        while listFinal.count > 0 {
+            let element = listFinal.last ?? 0
+            print("first  element == \(element)")
+            listFinal.removeLast()
+            if result == nil {
+                
+                result = ListNode.init(element)
+                lastNode = result
+            } else {
+                let node = ListNode.init(element)
+                lastNode?.next = node
+                lastNode = node
+            }
+        }
+        
+        return result
+    }
+    
 }

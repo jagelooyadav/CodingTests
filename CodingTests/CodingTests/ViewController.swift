@@ -77,6 +77,8 @@ class ViewController: UIViewController {
         let startIndex = string.index(string.startIndex, offsetBy: from)
         let endIndex = string.index(string.startIndex, offsetBy: to)
         let subString = string[startIndex...endIndex]
+        var dd = String(subString)
+        //dd.removeSubrange(<#T##Range<String.Index>#>)
         return String(subString)
     }
     
